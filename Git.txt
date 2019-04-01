@@ -1,0 +1,73 @@
+Steps to load a repo, work and push
+-> Fork to a repo in Github
+-> clone the repo using Git
+-> validate the remote/ add the origin
+-> make the changes to the files
+-> check for changes/validation of local Vs github repo - using Status cmd in Git
+-> Once the changes are done, add the changes to the stagging area - using add cmd in Git
+-> Commit the stagging area - using commit with a message in Git
+-> Review your commit  - using log in Git
+-> Push the changes to Github repo - using push by specifying the origin and branch of the Github in Git
+
+
+GIT - local
+GIT-HUB - online repository
+
+After downloading and Installing
+in Git-Bash(setup)
+$ git config --global user.name "Upendra Kanuru"
+$ git config --global user.email "upendra.kanuru.us@gmail.com"
+
+
+All the commands should be running in the workspace directory
+
+$ git clone <url of repo> - for cloning the repo from github, it creates the repo in the local 
+$ git init - to get the .git file
+
+.md - markdown file
+$ - header
+* - bullets
+
+$ git remote -v -> gives the origin from which the project is linked to in github
+$ git remote add origin <url> -> to add a URL to the origin
+
+$ git status -> give the status between the github repository and local repository
+
+$ git add <file name> -> to add a file to the stagging
+$ git add . -> to add all the files to the stagging
+
+$ git commit -m <message> -> to commit the changes to the stagging with a message
+
+$ git log -> to validate the commit and also see history of the commits
+
+$ git push origin master -> to push the master branch to the origin remote
+
+$ git pull origin master -> to pull the master branch to the local repo
+
+
+Fork - Github
+-----
+it is  to get a copy of others repository with their commit history.
+-> Fork a repo
+-> Make changes to the repo
+-> send a pull request asking to pull the changes to the owner of the repo(upstream)
+
+Fork doesn't auto sync with the upstream repo
+
+How to Sync it with the upstream repo(fetch -> merge)
+-> in Git and in your local repo
+-> create an origin to an upstream repo 
+$ git remote add upstream <upstream url>
+$ git remote -v -> to validate the origins
+-> fetch the upstream
+$ git fetch upstream
+-> the changes would be present in the upstream/master branch
+-> need to merge those change to local repo
+$ git merge upstream/master 
+-> your local will have all the change of the upstream
+-> use push command to move the change to the git repository
+
+
+Resources
+----------
+https://www.dataschool.io/git-quick-reference-for-beginners/
