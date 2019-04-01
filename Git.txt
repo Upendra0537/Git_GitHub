@@ -71,3 +71,10 @@ $ git merge upstream/master
 Resources
 ----------
 https://www.dataschool.io/git-quick-reference-for-beginners/
+
+ISSUES:
+---------
+Case 1:
+  fatal: refusing to merge unrelated histories
+Solution:
+  git pull origin branchname --allow-unrelated-histories
